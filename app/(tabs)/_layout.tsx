@@ -1,4 +1,4 @@
-import { Image, View, Text, ImageBackground } from 'react-native'
+import { Image, View, Text, ImageBackground, StatusBar } from 'react-native'
 import React from 'react'
 import { Tabs } from 'expo-router'
 import { images } from '@/constants/images'
@@ -28,6 +28,8 @@ const TabIcon = ({focused,icon,title}:any) => {
 }
 const _layout = () => {
     return (
+       <>
+        <StatusBar hidden={true}/>
         <Tabs
         screenOptions={{
             tabBarShowLabel:false,
@@ -107,6 +109,7 @@ const _layout = () => {
                 }}
             />
         </Tabs>
+       </>
     )
 }
 
